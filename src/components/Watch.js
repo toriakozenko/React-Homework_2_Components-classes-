@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ClockFace from './ClockFace.png';
 import ClockFace_H from './ClockFace_H.png';
 import ClockFace_M from './ClockFace_M.png';
 import ClockFace_S from './ClockFace_S.png';
 
-class Watch extends Component {
+class Watch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
