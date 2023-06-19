@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,66 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul > li {
+  list-style: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.clock-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.arrow {
+  position: absolute;
+  background-color: #000;
+  transform-origin: center bottom;
+  transition: transform 0.5s ease-in-out;
+}
+
+.arrow-hours {
+  width: 4px;
+  height: 60px;
+  top: 25%;
+  left: 50%;
+}
+
+.arrow-minutes {
+  width: 3px;
+  height: 80px;
+  top: 15%;
+  left: 50%;
+}
+
+.arrow-seconds {
+  width: 2px;
+  height: 100px;
+  top: 5%;
+  left: 50%;
+  background-color: red;
+  animation: rotate 60s linear infinite;
 }
